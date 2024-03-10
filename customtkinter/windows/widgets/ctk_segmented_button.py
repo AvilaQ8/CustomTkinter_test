@@ -403,7 +403,7 @@ class CTkSegmentedButton(CTkFrame):
                 if value == self._current_value:
                     self._select_button_by_value(self._current_value)
             else:
-                raise ValueError(f"CTkSegmentedButton can not insert value ''")
+                raise ValueError("CTkSegmentedButton can not insert value ''")
         else:
             raise ValueError(f"CTkSegmentedButton can not insert value '{value}', already part of the values")
 

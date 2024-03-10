@@ -52,4 +52,4 @@ class ThemeManager:
             else:
                 raise ValueError(f"cannot modify builtin theme '{cls._currently_loaded_theme}'")
         else:
-            raise ValueError(f"cannot save theme, no theme is loaded")
+            raise ValueError("cannot save theme, no theme is loaded")

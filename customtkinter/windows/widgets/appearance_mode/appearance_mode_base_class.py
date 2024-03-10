@@ -48,11 +48,11 @@ class CTkAppearanceModeBaseClass:
     @staticmethod
     def _check_color_type(color: any, transparency: bool = False):
         if color is None:
-            raise ValueError(f"color is None, for transparency set color='transparent'")
+            raise ValueError("color is None, for transparency set color='transparent'")
         elif isinstance(color, (tuple, list)) and (color[0] == "transparent" or color[1] == "transparent"):
             raise ValueError(f"transparency is not allowed in tuple color {color}, use 'transparent'")
         elif color == "transparent" and transparency is False:
-            raise ValueError(f"transparency is not allowed for this attribute")
+            raise ValueError("transparency is not allowed for this attribute")
         elif isinstance(color, str):
             return color
         elif isinstance(color, (tuple, list)) and len(color) == 2 and isinstance(color[0], str) and isinstance(color[1], str):
